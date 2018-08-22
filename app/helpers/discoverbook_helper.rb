@@ -1,0 +1,2 @@
+module DiscoverbookHelper
+end
