@@ -11,22 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20180820090623) do
+ActiveRecord::Schema.define(:version => 20180823071136) do
 
   create_table "bookdetails", :force => true do |t|
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.string   "bookname"
-    t.string   "author"
-    t.decimal  "price"
-    t.string   "description"
-    t.integer  "genre_id"
+    t.string  "bookname"
+    t.string  "author"
+    t.decimal "price"
+    t.string  "description"
+    t.integer "genre_id"
+  end
+
+  create_table "discoverbooks", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "genres", :force => true do |t|
-    t.string   "genre"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string "genre"
   end
 
   create_table "genres_users", :id => false, :force => true do |t|
@@ -35,12 +36,10 @@ ActiveRecord::Schema.define(:version => 20180820090623) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "firstname"
-    t.string   "lastname"
-    t.string   "email"
-    t.string   "password"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string "firstname"
+    t.string "lastname"
+    t.string "email"
+    t.string "password"
   end
 
 end
